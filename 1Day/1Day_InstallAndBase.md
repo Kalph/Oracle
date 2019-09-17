@@ -9,6 +9,8 @@
 
 ### 오라클 데이터베이스
 
+<br/>
+
 [https://www.oracle.com/kr/downloads/](https://www.oracle.com/kr/downloads/) <br/>
 
 -> Oracle Database 11g Release 2 Express Edition for Windows 64를 다운 후 설치한다.
@@ -31,6 +33,8 @@
 
 ## SQL Developer
 
+<br/>
+
 [https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html](https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html)
 
 <br/>
@@ -44,6 +48,8 @@ Windows 32-bit/64-bit 설치 진행
 <br/>
 
 ### 데이터베이스
+
+<br/>
 
 **데이터** - 관찰 결과로 나타난 값.  질적 또는 양적 값을 말한다. <br/>
 
@@ -70,6 +76,8 @@ Windows 32-bit/64-bit 설치 진행
 <br/>
 
 ### SQL
+
+<br/>
 
 DQL - 데이터 검색 - SELECT
 
