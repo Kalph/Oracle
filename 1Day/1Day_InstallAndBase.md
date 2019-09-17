@@ -65,10 +65,9 @@ Windows 32-bit/64-bit 설치 진행
 
 <br/>
 
-https://coding-factory.tistory.com/78
+[[DB기초] DBMS 개념과 종류 및 장단점 분석](coding-factory.tistory.com)](https://coding-factory.tistory.com/78)
 
-
-[[DB기초] DBMS 개념과 종류 및 장단점 분석](coding-factory.tistory.com)<br/>
+<br/>
 
 ### SQL
 
