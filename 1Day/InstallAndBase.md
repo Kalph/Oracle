@@ -23,6 +23,8 @@
 
 이후 CMD -> sqlplus -> sys as sysdba -> 비밀번호를 입력하여 오라클이 정상적으로 설치되었는지 확인한다.
 
+![sample1](/Image/Day1_Img/sample1.png)
+
 <br/>
 
 ## SQL Developer
