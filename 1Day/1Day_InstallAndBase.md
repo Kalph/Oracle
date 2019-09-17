@@ -1,7 +1,7 @@
 목차
 ==============
 [설치](#설치)<br/>
-[SQL Develper](#sql-developer)<br/><br/>
+[SQL Developer](#sql-developer)<br/><br/>
 
 ## <설치>
 
