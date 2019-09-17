@@ -157,7 +157,7 @@ SELECT * FROM LIVINGROOM; -- LivingRoom의 테이블의 모든 정보를 조회 
  -- LIVINGROOM 테이블의 해당 ROOM1~3까지의 정보 조회
 SELECT ROOM1,ROOM2,ROOM3 FROM LIVINGROOM;
 
--- 객체에 산술연살을 할 수도 있음
+-- 컬럼에 산술연산을 할 수도 있음
 SELECT ROOM_COUNT * 10 FROM LIVINGROOM;
 
 -- 현재 날짜에서 ROOM-DATE를 뺄 수도 있음
