@@ -12,7 +12,7 @@
 
 5. BETWEEN AND / NOT BETWEEN AND
 
-6, NOT(논리연산자)
+6. NOT(논리연산자)
 
 7. AND(논리연산자)
 
