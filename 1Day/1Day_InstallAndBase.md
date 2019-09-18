@@ -149,7 +149,7 @@ SQl Developer - GUI 툴
 
 ```sql
 SELECT * FROM LIVINGROOM; -- LivingRoom의 테이블의 모든 정보를 조회 ( *은 모든 정보를 의미 )
--- SELECT : 데이터베이스의 데이터를 조회하거나 검색하기 위한 명령어이다.
+-- ﻿SELECT : 데이터베이스의 데이터를 조회하거나 검색하기 위한 명령어이다.
 -- SELECT 가 아닌 select로 작성해도 상관 X - 대소문자를 구분하지 않음
 -- 회사에서 따라 대문자와 소문자를 작성하는 방식이 다를 수 있음.
 -- 드래그 후 alt + ' 을 통해 해당 구문의 대소문자를 한번에 변경 가능
@@ -157,7 +157,7 @@ SELECT * FROM LIVINGROOM; -- LivingRoom의 테이블의 모든 정보를 조회 
  -- LIVINGROOM 테이블의 해당 ROOM1~3까지의 정보 조회
 SELECT ROOM1,ROOM2,ROOM3 FROM LIVINGROOM;
 
--- 컬럼에 산술연산을 할 수도 있음
+-- 컬렘에 산술연산을 할 수도 있음
 SELECT ROOM_COUNT * 10 FROM LIVINGROOM;
 
 -- 현재 날짜에서 ROOM-DATE를 뺄 수도 있음
@@ -227,3 +227,5 @@ SELECT ROOM1
 FROM LIVINGROOM
 WHERE ROOM_NAME LIKE '__@_%' ESCAPE '@';
 ```
+
+<br/>
