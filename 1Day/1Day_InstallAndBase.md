@@ -149,7 +149,7 @@ SQl Developer - GUI 툴
 
 ```sql
 SELECT * FROM LIVINGROOM; -- LivingRoom의 테이블의 모든 정보를 조회 ( *은 모든 정보를 의미 )
--- ﻿SELECT : 데이터베이스의 데이터를 조회하거나 검색하기 위한 명령어이다.
+-- SELECT : 데이터베이스의 데이터를 조회하거나 검색하기 위한 명령어이다.
 -- SELECT 가 아닌 select로 작성해도 상관 X - 대소문자를 구분하지 않음
 -- 회사에서 따라 대문자와 소문자를 작성하는 방식이 다를 수 있음.
 -- 드래그 후 alt + ' 을 통해 해당 구문의 대소문자를 한번에 변경 가능
@@ -173,7 +173,7 @@ SELECT ROOM1 AS "룸1" FROM LIVINGROOM;
 -- 위와 같은 다양한 방식이 있음.
 
 -- 리터럴을 이용하면 테이블에 존재하는 데이터로 사용 가능
-SELECT ROOM1 '방' AS '룸1' FROM LIVINGROOM; 
+SELECT ROOM1 '방' AS "룸1" FROM LIVINGROOM; 
 
 -- WHERE를 통해 LIVINGROOM 테이블에서 ROOM_NAME가 A1인 행의 ROOM1을 골라냄
 SELECT ROOM1 FROM LIVINGROOM WHERE ROOM_NAME = 'A1';
