@@ -123,7 +123,11 @@ GROUP BY CUBE(ROOM_NAME)
 ORDER BY 1;
 ```
 
-[[ oracle 10g ] 오라클 고급SQL -그룹핑 함수들](https://m.blog.naver.com/PostView.nhn?blogId=minis24&logNo=80100555203&proxyReferer=https%3A%2F%2Fwww.google.com%2F)</br>
+</br>
+
+[[ oracle 10g ] 오라클 고급SQL -그룹핑 함수들](https://m.blog.naver.com/PostView.nhn?blogId=minis24&logNo=80100555203&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
+
+</br>
 
 ```sql
 --SET OPTION 
