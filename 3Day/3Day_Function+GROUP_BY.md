@@ -62,6 +62,8 @@ FROM LIVINGROOM;
 
 ## GROUP BY
 
+</br>
+
 SELECT한 컬럼에 대해 정렬하기 위해 작성하는 구문
 
 </br>
@@ -185,4 +187,4 @@ WHERE ROOM_PRICE > 2500;
 </br>
 
 [GROUPING SET](http://www.gurubee.net/lecture/2680) </br>
-[GROUPING SETS](https://thebook.io/006696/part01/ch05/04/06/)) </br>
+[GROUPING SETS](https://thebook.io/006696/part01/ch05/04/06/) </br>
