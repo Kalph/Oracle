@@ -7,7 +7,8 @@ Oracle
 
 > ## 목차 <br>
  1일차 - [설치 및 기초](https://github.com/Kalph/OracleStudy/tree/master/1Day) <br/>
- 2일차 - [SELECT+함수](https://github.com/Kalph/OracleStudy/tree/master/2Day)<br/>
+ 2일차 - [SELECT+함수](https://github.com/Kalph/OracleStudy/tree/master/2Day) <br/>
+ 3일차 - [함수+GROUP_BY](https://github.com/Kalph/OracleStudy/tree/master/3Day) <br/>
 
     
 * 그외 응용 문제해결 공간 <br/>
