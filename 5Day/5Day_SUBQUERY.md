@@ -14,7 +14,7 @@ select - 스칼라서브쿼리
 
 <br/>
 
-[[오라클/SQL] 서브쿼리 (WHERE절/FROM절/SELECT절)](http://blog.naver.com/PostView.nhn?blogId=pyj721aa&logNo=221466664622&categoryNo=0&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView]
+[[오라클/SQL] 서브쿼리 (WHERE절/FROM절/SELECT절)](http://blog.naver.com/PostView.nhn?blogId=pyj721aa&logNo=221466664622&categoryNo=0&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView)
 
 <br/>
 
