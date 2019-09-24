@@ -3,7 +3,7 @@
 * [DDL](#DDL)</br>
 * [CREATE](#CREATE)</br>
 * [제약 조건](#제약-조건)</br>
-* [PRIMARY KEY(기본키), FOREIGN KEY(외래키)](#PRIMARY-KEY-기본키-FOREIGN-KEY-외래키)</br></br>
+* [PRIMARY KEY(기본키), FOREIGN KEY(외래키)](#primary-key기본키-foreign-key외래키)</br></br>
 
 ## DDL
 
