@@ -7,7 +7,7 @@ Oracle
 
 > ## 목차 <br>
  1일차 - [설치 및 기초](https://github.com/Kalph/OracleStudy/tree/master/1Day) <br/>
- 2일차 - [SELECT+함수](https://github.com/Kalph/OracleStudy/tree/master/2Day) <br/>
+ 2일차 - [DML(SELECT)+함수](https://github.com/Kalph/OracleStudy/tree/master/2Day) <br/>
  3일차 - [함수+GROUP_BY](https://github.com/Kalph/OracleStudy/tree/master/3Day) <br/>
  4일차 - [JOIN](https://github.com/Kalph/OracleStudy/tree/master/4Day)<br/>
  5일차 - [SUBQUERY](https://github.com/Kalph/OracleStudy/tree/master/5Day)</br>
