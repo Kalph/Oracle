@@ -14,6 +14,7 @@ Oracle
  6일차 - [DDL(CREATE)](https://github.com/Kalph/OracleStudy/tree/master/6Day)</br>
  7일차 - [DDL(ALTER,DROP)]()</br>
  8일차 - [DML(INSERT,UPDATE, DELETE)]()</br>
+ 9일차 - [VIEW+SEQUENCE]()</br>
 
     
 * 그외 응용 문제해결 공간 <br/>
