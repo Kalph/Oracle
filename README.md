@@ -13,7 +13,7 @@ Oracle
  5일차 - [SUBQUERY](https://github.com/Kalph/OracleStudy/tree/master/5Day)</br>
  6일차 - [DDL(CREATE)](https://github.com/Kalph/OracleStudy/tree/master/6Day)</br>
  7일차 - [DDL(ALTER,DROP)](https://github.com/Kalph/OracleStudy/tree/master/7Day)</br>
- 8일차 - [DML(INSERT,UPDATE, DELETE)]()</br>
+ 8일차 - [DML(INSERT,UPDATE, DELETE)](https://github.com/Kalph/OracleStudy/tree/master/8Day)</br>
  9일차 - [VIEW+SEQUENCE]()</br>
 
     
