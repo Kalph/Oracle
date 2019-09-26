@@ -52,7 +52,7 @@ SELECT * FROM USER_TAB_COLS WHERE TABLE_NAME = 'TEST5';
 
 [[Oracle 공부하기]INSERT ALL](https://onnuri0.tistory.com/entry/Oracle-%EA%B3%B5%EB%B6%80%ED%95%98%EA%B8%B0INSERT-ALL)
 
-<br/>
+<br/> <br/>
 
 ## UPDATE 
 
@@ -77,7 +77,7 @@ WHERE GRADE_CODE = 'S';
 
 <br/>
 
-[ORACLE | MERGE문 (DML)](https://everyday-deeplearning.tistory.com/entry/ORACLE-MERGE%EB%AC%B8DML) <br/>
+[ORACLE | MERGE문 (DML)](https://everyday-deeplearning.tistory.com/entry/ORACLE-MERGE%EB%AC%B8DML) <br/> <br/>
 
 
 ## DELETE
