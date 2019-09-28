@@ -5,7 +5,7 @@
 * [UPDATE](#UPDAT)</br>
 * [DELETE](#DELETE)</br><br/>
 
-##DML 
+## DML 
 
 * 데이터 조작어, 데이터베이스의 데이터를 조회, 삽입, 변경, 삭제가 가능하다.
 
