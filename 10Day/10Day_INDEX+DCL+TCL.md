@@ -2,7 +2,7 @@
 =========
 * [인덱스](#인덱스)</br>
 * [DCL](#DCL)</br>
-* [TCL](#TCL)</br></br>
+* [TCL트랜잭션](#tcl트랜잭션)</br></br>
 
 ## 인덱스
 
@@ -62,7 +62,7 @@ SELECT * FROM USER_IND_COLUMNS WHERE TABLE_NAME = 'TEST_COPY';
 
 </br>
 
-``sql
+```sql
 -- 비고유 인덱스
 -- 성능 향상이 목적
 
@@ -140,7 +140,7 @@ ALTER INDEX IDX_MM3 REBUILD;
 
 **테이블 스페이스 할당량 부여**
 
-*ALTER USER 계정 QUOTA [할당량](ex.2M) ON SYSTEM; 
+ALTER USER 계정 QUOTA 할당량(ex.2M) ON SYSTEM; 
 
 **권한 부여**
 
