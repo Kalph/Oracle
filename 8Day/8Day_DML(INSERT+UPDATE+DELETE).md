@@ -1,7 +1,7 @@
 목차
 =========
 * [VIEW](#VIEW)</br>
- * [뷰 옵션](#뷰 옵션)</br>
+  * [뷰 옵션](#뷰 옵션)</br>
 * [SEQUENCE](#SEQUENCE)</br>
 
 ## VIEW
