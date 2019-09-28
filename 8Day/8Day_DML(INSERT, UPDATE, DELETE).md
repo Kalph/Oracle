@@ -73,7 +73,10 @@ WHERE GRADE_CODE = 'S';
 
 <br/>
 
-[ORACLE | MERGE문 (DML)](https://everyday-deeplearning.tistory.com/entry/ORACLE-MERGE%EB%AC%B8DML)<br/>
+[ORACLE | MERGE문 (DML)](https://everyday-deeplearning.tistory.com/entry/ORACLE-MERGE%EB%AC%B8DML)
+
+<br/>
+
 ## DELETE
 
 <br/>
