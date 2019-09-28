@@ -15,7 +15,7 @@ Oracle
  7일차 - [DDL(ALTER,DROP)](https://github.com/Kalph/OracleStudy/tree/master/7Day)</br>
  8일차 - [DML(INSERT,UPDATE, DELETE)](https://github.com/Kalph/OracleStudy/tree/master/8Day)</br>
  9일차 - [VIEW+SEQUENCE](https://github.com/Kalph/OracleStudy/tree/master/9Day)</br>
- 10일차 - [인덱스+DCL+TCL]()</br>
+ 10일차 - [인덱스+DCL+TCL](https://github.com/Kalph/OracleStudy/tree/master/10Day)</br>
  11일차 - [SYNONYM+PL+SQL]()</br>
     
 * 그외 응용 문제해결 공간 <br/>
