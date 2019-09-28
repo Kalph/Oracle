@@ -1,138 +1,173 @@
 목차
 =========
-* [DML](#DML)</br>
-* [INSERT](#INSERT)</br>
-* [UPDATE](#UPDATE)</br>
-* [DELETE](#DELETE)</br></br>
+* [VIEW](#VIEW)</br>
+ * [뷰 옵션](#뷰 옵션)</br>
+* [SEQUENCE](#SEQUENCE)</br>
 
-## DML 
+## VIEW
 
-<br/>
+- 하나 또는 하나 이상의 테이블로부터 데이터의 부분집합을 논리적으로 표현한 것
 
-- 데이터 조작어, 데이터베이스의 데이터를 조회, 삽입, 변경, 삭제가 가능하다.
+- 논리적인 가상 테이블임
 
-- SELECT, INSERT, UPDATE, DELETE
-
-<br/>
-
-## INSERT
+- 실질적 데이터를 저장하진 않는다
 
 <br/>
 
-- 테이블의 데이터(행)을 추가하기 위한 SQL 문
+**사용 이유?**
+
+- 데이터를 선별적으로 보여줌으로 민감한 정보 보호 가능
+
+- 복잡한 질의를 쉽게 만들어줌
+
+- 성능 향상
 
 <br/>
 
 ```sql
--- 행 추가
-INSERT INTO TEST5 VALUES(2,'2번방','사과','맛있다','착한손님','111-23452-4524','S');
-
--- 서브쿼리를 이용하여 INSERT도 가능하다.
-
--- TEST5의 정보, 제약조건 딕셔너리와 테이블 컬럼 관리 딕셔너리을 조회
-SELECT * FROM TEST5;
-SELECT * FROM USER_CONSTRAINTS WHERE TABLE_NAME = 'TEST5';
-SELECT * FROM USER_TAB_COLS WHERE TABLE_NAME = 'TEST5';
+GRANT CREATE VIEW TO test;
 ```
 
 <br/>
 
-## INSERT ALL
+먼저 관리자 계정에서 위와 같은 구문을 통해 VIEW를 생성할 권한을 test 계정에 부여해준다.
 
 <br/>
 
-- INSERT시 서브쿼리가 사용하는 테이블이 같은 경우, 두 개 이사으이 테이블을 한번에 삽입 가능.
+```sql
+SELECT * FROM USER_VIEWS;
+SELECT * FROM VIEW_TEST;
+```
 
 <br/>
 
-[Unconditional INSERT ALL](http://www.gurubee.net/lecture/2688)
+위와 같은 구문을 통해 뷰를 조회할 경우 VIEW에 TEST_COPY의 값들이 들어가 있음을 알 수 있다.
+
+**여기서 TEST_COPY(베이스 테이블)의 정보가 변경되면 VIEW의 정보도 변경된다.**
 
 <br/>
- 
 
-[[Oracle 공부하기]INSERT ALL](https://onnuri0.tistory.com/entry/Oracle-%EA%B3%B5%EB%B6%80%ED%95%98%EA%B8%B0INSERT-ALL)
+```sql
+CREATE OR REPLACE VIEW V_TEST2(방번호,방이름,손님,손님등급)
+AS SELECT ROOM_NO,MYROOM_NAME, MYROOM_NAME2, DECODE(GRADE_CODE, 'S','VIP','B','LOW','C','BAD')
+FROM TEST_COPY;
+
+SELECT * FROM V_TEST2;
+```
+
+<br/>
+
+함수를 사용할 경우 별칭을 지정해줘야 오류가 생기지 않고 정상적으로 VIEW가 생성된다.
+
+<br/>
+
+생성된 뷰를 통해서 INSERT, UPDATE, DELETE도 가능하다
+
+<br/>
+
+```sql
+SELECT * FROM TEST_COPY;
+INSERT INTO V_TEST2 VALUES(4,'4번방','수박','C');
+```
+<br/>
+
+그러나 위 구문에서는 오류가 생긴다.
+
+이는 뷰를 통해서 베이스 테이블을 업데이트 하려 할 경우 대상 테이블의 레코드가 변형이 되면 안된다.
+
+따라서 아래와 같이 새 테이블을 만들고 수정하면 정상적으로 INSERT가 됨을 알 수 있다.
+
+<br/>
+
+```sql
+CREATE OR REPLACE VIEW V_TEST3
+AS SELECT *
+FROM TEST_COPY;
+
+INSERT INTO V_TEST3 VALUES(2,'2번방','수박','달아',null,null,'S','대기중',null,null);
+
+SELECT * FROM V_TEST3;
+SELECT * FROM TEST_COPY;
+-- 베이스테이블과 뷰 테이블의 내용물을 확인할 경우 베이스 테이블의 
+-- 내부값들도 수정됐음을 알 수 있다.
+
+UPDATE V_TEST3
+SET MYROOM_NAME2 = '복숭아'
+WHERE MYROOM_NAME2 ='사과';
+
+DELETE FROM V_TEST3
+WHERE ROOM_NO = 2;
+```
+
+**핵심은 뷰에 정의되지 않은 컬럼을 조작하려 할 경우 오류가 생긴다는 것.** 
+
+또는 뷰에 포함되지 않은 컬럼 중 베이스가 되는 테이블 컬럼이 NOT NULL 제약조건이 지정된 경우에도 
+
+INSERT시 오류가 발생한다.
+
+<br/>
+
+이 외에도 산술 표현식의 경우 INSERT 부분에서 오류 발생
+
+JOIN은 INSERT와 UPDATE부분에서 오류 발생
+
+GROUP BY, DISTINCT절을 포함한 경우 모든 DML 명령어 모두 오류가 발생한다.
+
+<br/>
+
+## 뷰 옵션
+
+<br/>
+
+OR  REPLACE - 기존의 뷰를 생성하는 것과 마찬가지로 사용, 덮어쓰기 기능
+
+FORECE / NO FORCE - FROCE를 사용할 경우 테이블이 존재하지 않아도 뷰를 생성한다. 
+
+WITH CHECK OPTION - 해당 옵션을 설정한 컬럼의 값을 수정 불가능하게 함
+
+WITH READ ONLY  - 뷰에 대해 조회만 가능하게 설정
 
 <br/> <br/>
 
-## UPDATE 
+## SEQUENCE
+
+<br/>
+
+- 자동으로 숫자를 생성시켜 기본 키의 조건을 만족시켜줌
+
+- 하나의 시퀸스는 여러 테이블에서 사용 가능
+
+<br/>
+
+**시퀸스 만들어보기**
 
 <br/>
 
 ```sql
-SELECT * FROM TEST_COPY;
+CREATE SEQUENCE SEQ_TEST
+START WITH 100
+INCREMENT BY 10
+MAXVALUE 200
+NOCYCLE
+NOCACHE;
+-- 시작값 100에서 10씩 증가하되 200을 최대로 두는 SEQ_TEST 시퀸스 생성
 
-COMMIT;
-UPDATE TEST_COPY
-SET MAS_ROOM = '대기중';
-ROLLBACk;
+SELECT * FROM USER_SEQUENCES;
 
-UPDATE TEST_COPY
-SET MAS_ROOM = '대기중'
-WHERE GRADE_CODE = 'S';
-```
+-- NEXTVAL을 통해 시퀸스를 호출하고 CURRVAL을 통해 현재 시퀸스의 값을 확인
+SELECT SEQ_TEST.NEXTVAL FROM DUAL;
+SELECT SEQ_TEST.CURRVAL FROM DUAL;
 
-<br/>
+-- 시퀸스를 SELECT, INSERT, UPDATE에도 사용 가능
+- VIEW나 DISTINCT, GROUP/ORDER BY 및 서브쿼리, DEFAULT 값 에서는 사용 불가능
 
-### MERGE - 병합
+-- 시퀸스 수정
+ALTER SEQUENCE SEQ_TEST
+INCREMENT BY 20
+MAXVALUE 1000;
 
-<br/>
-
-[ORACLE | MERGE문 (DML)](https://everyday-deeplearning.tistory.com/entry/ORACLE-MERGE%EB%AC%B8DML) <br/> <br/>
-
-
-## DELETE
-
-<br/>
-
-```sql
-COMMIT;
-DELETE FROM TEST_COPY
-WHERE MYROOM_NAME ='1번방';
-SELECT * FROM TEST_COPY;
-ROLLBACK;
-
--- FOREIGN KEY 제약조건이 설정되어 있는 경우 참고 된 값에 대해선 삭제 불가
-
--- 임시로 사용할 테이블 TMP 생성
-CREATE TABLE TMP(
-    ROOM_A REFERENCES ROOM_GRADE(GRADE_CODE)
-);
-
-SELECT * FROM TMP;
-
--- 행을 집어넣고
-INSERT INTO TMP VALUES('S');
-INSERT INTO TMP VALUES('C');
-
-COMMIT;
-
--- 조건을 주어 참고한 테이블의 S를 삭제하고자 할 경우 불가능 
--- 오류 : child record found 발생
-DELETE FROM ROOM_GRADE
-WHERE GRADE_CODE ='S';
-
--- 다만 참고하지 않은 값에 한해서는 행 삭제 가능
-DELETE FROM ROOM_GRADE
-WHERE GRADE_CODE ='B';
-
-ROLLBACK;
-
--- 제약조건 활성화/비활성화
-SELECT * FROM USER_CONSTRAINTS WHERE TABLE_NAME = 'TMP';
-
--- 비활성화
-ALTER TABLE TMP
-DISABLE CONSTRAINT SYS_C007314 CASCADE;
-
--- 활성화
-ALTER TABLE TMP
-ENABLE CONSTRAINT SYS_C007314;
-
--- TRUNCATE
--- 테이블을 자른다. ROLLBACK으로 복구 불가능. 신중한 사용을 요함.
-TRUNCATE TABLE TMP;
-SELECT * FROM TMP;
-
-ROLLBACK;
+-- 시작 값은 수정 불가능
+-- 삭제 후 재생성 해야함
+DROP SEQUENCE SEQ_TEST;
 ```
 <br/>
