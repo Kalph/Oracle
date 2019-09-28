@@ -3,7 +3,7 @@
 * [DML](#DML)</br>
 * [INSERT](#INSERT)</br>
 * [UPDATE](#UPDAT)</br>
-* [DELETE(#DELETE)</br><br/>
+* [DELETE](#DELETE)</br><br/>
 
 ##DML 
 
