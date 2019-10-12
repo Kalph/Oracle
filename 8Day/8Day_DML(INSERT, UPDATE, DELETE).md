@@ -19,6 +19,9 @@
 
 * 테이블의 데이터(행)을 추가하기 위한 SQL 문
 
+<br/>
+
+```sql
 -- 행 추가
 INSERT INTO TEST5 VALUES(2,'2번방','사과','맛있다','착한손님','111-23452-4524','S');
 
@@ -26,9 +29,6 @@ INSERT INTO TEST5 VALUES(2,'2번방','사과','맛있다','착한손님','111-23
 
 -- TEST5의 정보, 제약조건 딕셔너리와 테이블 컬럼 관리 딕셔너리을 조회
 
-<br/>
-
-```sql
 SELECT * FROM TEST5;
 SELECT * FROM USER_CONSTRAINTS WHERE TABLE_NAME = 'TEST5';
 SELECT * FROM USER_TAB_COLS WHERE TABLE_NAME = 'TEST5';
