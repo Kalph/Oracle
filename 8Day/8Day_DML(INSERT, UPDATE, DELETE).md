@@ -40,7 +40,7 @@ SELECT * FROM USER_TAB_COLS WHERE TABLE_NAME = 'TEST5';
 
 <br/>
 
-- INSERT시 서브쿼리가 사용하는 테이블이 같은 경우, 두 개 이사으이 테이블을 한번에 삽입 가능.
+- INSERT시 서브쿼리가 사용하는 테이블이 같은 경우, 두 개 이상의 테이블을 한번에 삽입 가능.
 
 <br/>
 
