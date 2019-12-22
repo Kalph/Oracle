@@ -19,12 +19,10 @@ Oracle
  11일차 - [SYNONYM+PL/SQL](https://github.com/Kalph/OracleStudy/tree/master/11Day)</br>
  12일차 - [PROCEDURE+FUNCTION+CURSOR+PACKAGE,TRIGGER](https://github.com/Kalph/OracleStudy/tree/master/12Day)<br/>
     
-* 그외 응용 문제해결 공간 <br/>
+* 그외<br/>
+ [시퀀스 한꺼번에 증가시키기](https://github.com/Kalph/OracleStudy/blob/master/%EA%B7%B8%EC%99%B8/01.%20Increment%20sequence.md) <br/>
  []() <br/>
  
-* 미니 프로젝트 <br/>
-[]()<br/> 
-
  
 
 
