@@ -22,6 +22,7 @@ Oracle
 * 그외<br/>
  [시퀀스 한꺼번에 증가시키기](https://github.com/Kalph/OracleStudy/blob/master/%EA%B7%B8%EC%99%B8/01.%20Increment%20sequence.md) <br/>
  [mysql, mssql 최적화]() <br/>
+ [mssql 로그인 오류](https://blog.naver.com/kjskhj04366/221825988970) <br/>
  []() <br/>
  
  
